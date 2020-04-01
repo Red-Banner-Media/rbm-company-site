@@ -10,17 +10,40 @@
         </div>
     </div>
     <div class="rbm-header-thin bg-primary bg-repeat bg-center text-center h-12 mb-3 w-full
-     fixed top-0 flex flex-row sm:justify-center md:justify-center lg:justify-center xl:justify-start
+     fixed top-0 flex flex-row sm:justify-center md:justify-center lg:justify-center xl:justify-between
      hidden transition duration-100 ease-in-out">
-        <h1 class="z-10 text-left text-3xl text-yellow-600 w-2/5 ml-8 mr-12 sm:hidden md:hidden lg:hidden xl:block">
+        <h1 class="z-10 text-left text-3xl text-yellow-600 w-1/3 ml-8 mr-12 sm:hidden md:hidden lg:hidden xl:block">
             RED BANNER MEDIA
         </h1>
-        <div class="z-30">
+        <div class="z-30 w-1/3 flex justify-center">
             <img class="h-16 w-32 px-1 z-20"
                  src="./asset/RedBannerMedia_ThinLogo.png"
                  alt="Red Banner Media Thin Logo"
-                 @click="top()"
-            >
+                 @click="top()">
         </div>
+        <div class="hamburger-menu m-3 w-1/3 flex justify-end" v-if="!hideElement" @click="handleMenu">
+            <svg class="text-yellow-600 fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+            </svg>
+        </div>
+        <div class="hamburger-menu-close m-3 w-1/3 flex justify-end" v-if="hideElement" @click="handleMenu">
+            <svg class="text-yellow-900 fill-current h-6 2-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+            </svg>
+            <div class="bg-primary">
+                <ul class="bg-primary p-4 flex flex-col flex-wrap">
+                    <li>
+                        <a href="#services" class="text-secondary px-4 hover:text-white hover:bg-secondary">Services</a>
+                    </li>
+                    <li>
+                        <a href="#Portfolio" class="text-secondary px-4 hover:text-white hover:bg-secondary">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="text-secondary px-4 hover:text-white hover:bg-secondary">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </div>
