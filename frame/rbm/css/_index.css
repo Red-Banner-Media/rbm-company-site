@@ -1,0 +1,44 @@
+/*
+* Run "npx tailwind build frame/vastn3/style.dev.css -o frame/vastn3/style.css"
+*/
+
+@import "theme.css";
+
+@import "base.css";
+@import "components.css";
+@import "utilities.css";
+
+@import "animate.css";
+@import "helper.css";
+@import "form.css";
+@import "button.css";
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(#b8bbb8, #4b4f4c) no-repeat fixed;
+}
+
+h1{
+    font-family: 'Lora', serif;
+}
+
+.rbm-header{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.rbm-header:before{
+    content: "";
+    position: absolute;
+    width: 700%;
+    height: 1000%;
+    top: -50%;
+    left: -200%;
+    background-repeat: repeat;
+    background-position: center;
+    background-image: url("./asset/RedBannerMedia_Diamond.svg");
+    transform: rotate(45deg);
+}

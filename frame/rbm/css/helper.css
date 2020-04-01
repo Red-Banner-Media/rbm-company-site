@@ -1,0 +1,9 @@
+.vastn3-has-tooltip .vastn3-tooltip{
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+}
+.vastn3-has-tooltip:hover .vastn3-tooltip{
+    visibility: visible;
+}

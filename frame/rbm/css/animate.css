@@ -1,0 +1,15 @@
+/* Turn */
+
+@keyframes rotate-clock {
+    to {transform: rotate(360deg);}
+}
+@keyframes rotate-counter-clock {
+    to {transform: rotate(-360deg);}
+}
+
+.rotate-clock{
+    animation: rotate-clock 1s linear infinite;
+}
+.rotate-counter-clock {
+    animation: rotate-counter-clock 1s linear infinite;
+}

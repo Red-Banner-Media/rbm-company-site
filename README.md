@@ -1,2 +1,2 @@
-# rbm-company-site
-Company portoflio for Red Banner Media
+# rbmCompanySite
+The company website for Red Banner Media LLC

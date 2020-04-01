@@ -1,0 +1,17 @@
+/*
+COLORS
+*/
+:root{
+    --color-primary: #470101;
+    --color-secondary: #ce2391;
+    --color-success: #119e00;
+    --color-warning: #bb940e;
+    --color-danger: #b41514;
+}
+
+body,
+html{
+    min-height: 100vh;
+    background-color: #e2e8f0;
+}
+

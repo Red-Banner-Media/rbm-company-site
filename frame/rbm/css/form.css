@@ -1,0 +1,9 @@
+.input{
+    @apply my-2;
+}
+.input label{
+    @apply text-gray-700;
+}
+.input input{
+    @apply appearance-none block w-full bg-gray-100 p-2;
+}
