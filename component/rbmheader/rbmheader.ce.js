@@ -12,8 +12,6 @@ Vue.component('rbmheader', {
     methods: {
         handleScroll () {
             this.sticky = this.headerElement.offsetTop;
-            console.log(this.sticky);
-            console.log(this.headerElement);
             if(window.pageYOffset > 326) {
                 this.headerElement.classList.remove('hidden');
             } else {

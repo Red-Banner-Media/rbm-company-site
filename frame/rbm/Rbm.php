@@ -8,12 +8,11 @@
 
 namespace Neoan3\Frame;
 
-use mysql_xdevapi\TableDelete;
 use Neoan3\Core\Serve;
 
 class Rbm extends Serve
 {
-    private $loadedComponents = [];
+    private array $loadedComponents = [];
 
     function __construct()
     {

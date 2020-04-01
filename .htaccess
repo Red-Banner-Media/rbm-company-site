@@ -2,7 +2,7 @@
 #Options +FollowSymLinks
 RewriteEngine On
 
-RewriteBase /rbm-company-site/
+RewriteBase /rbm-company/
 
 
 # turn off www

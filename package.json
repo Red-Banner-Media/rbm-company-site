@@ -23,16 +23,13 @@
   },
   "homepage": "https://github.com/sroehrl/neoan3#readme",
   "dependencies": {
+    "autoprefixer": "^9.7.5",
     "axios": "^0.19.2",
     "lodash": "^4.17.15",
     "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
     "tailwindcss": "^1.2.0",
-    "vue": "^2.6.11",
-    "autoprefixer": "latest"
-  },
-  "devDependencies": {
-    "postcss-import": "^12.0.1"
+    "vue": "^2.6.11"
   }
 }
