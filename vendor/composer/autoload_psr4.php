@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Neoan3\\Apps\\' => array($vendorDir . '/neoan3-apps/db', $vendorDir . '/neoan3-apps/template', $vendorDir . '/neoan3-apps/transformer'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'Neoan3\\Apps\\' => array($vendorDir . '/neoan3-apps/db', $vendorDir . '/neoan3-apps/hcaptcha', $vendorDir . '/neoan3-apps/template', $vendorDir . '/neoan3-apps/transformer'),
 );

@@ -7,8 +7,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mnsami/composer-custom-directory-installer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/neoan3-apps/db" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/neoan3-apps/hcaptcha" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/neoan3-apps/template" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/neoan3-apps/transformer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

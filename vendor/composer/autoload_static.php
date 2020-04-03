@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit1afed20e80a9c96e41087ae4b4457a98
 {
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'N' => 
         array (
             'Neoan3\\Apps\\' => 12,
@@ -14,11 +18,16 @@ class ComposerStaticInit1afed20e80a9c96e41087ae4b4457a98
     );
 
     public static $prefixDirsPsr4 = array (
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Neoan3\\Apps\\' => 
         array (
             0 => __DIR__ . '/..' . '/neoan3-apps/db',
-            1 => __DIR__ . '/..' . '/neoan3-apps/template',
-            2 => __DIR__ . '/..' . '/neoan3-apps/transformer',
+            1 => __DIR__ . '/..' . '/neoan3-apps/hcaptcha',
+            2 => __DIR__ . '/..' . '/neoan3-apps/template',
+            3 => __DIR__ . '/..' . '/neoan3-apps/transformer',
         ),
     );
 

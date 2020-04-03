@@ -9,14 +9,28 @@
 namespace Neoan3\Frame;
 
 use Neoan3\Core\Serve;
+use Neoan3\Apps\Hcapture;
 
 class Rbm extends Serve
 {
+    private array $credentials = [];
     private array $loadedComponents = [];
 
     function __construct()
     {
         parent::__construct();
+        try {
+            $this->credentials = getCredentials();
+        } catch (\Exception $e) {
+            print('SETUP: No credentials found. Please check README for instructions and/or change ' . __FILE__ . ' starting at line ' . (__LINE__ - 4) . ' ');
+            die();
+        }
+        // TODO: Test Hcapture
+        Hcapture::setEnvironment([
+            'siteKey' => $this->credentials['rbm_hcaptcha']['sitekey'],
+            'secret' => $this->credentials['rbm_hcaptcha']['secret'],
+            'apiKey' => $this->credentials['rbm_hcaptcha']['apiKey']
+        ]);
     }
 
     function constants()
@@ -46,8 +60,9 @@ class Rbm extends Serve
                 ['src' => base . 'node_modules/vue/dist/vue.js'],
                 // TODO: Remove regular and replace with min version after production
                 // ['src' => base . 'node_modules/vue/dist/vue.min.js'],
-                ['src' => base . 'node_modules/lodash/lodash.min.js'],
-                ['src' => base . 'frame/rbm/main.js', 'data' => ['base' => base]]
+                ['src' => base . 'frame/rbm/main.js', 'data' => ['base' => base]],
+                // TODO: Talk to Stefan about adding attributes like async & defer
+                ['src' => 'https://hcaptcha.com/1/api.js', 'attr'=>'async']
             ]
         ];
     }
@@ -96,7 +111,6 @@ class Rbm extends Serve
                 $this->vueComponents($dependencies(), $params);
             }
         }
-
         return $this;
     }
 }

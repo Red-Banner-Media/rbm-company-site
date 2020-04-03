@@ -8,6 +8,8 @@
       <path value="$PROJECT_DIR$/vendor/neoan3-apps/transformer" />
       <path value="$PROJECT_DIR$/vendor/neoan3-apps/template" />
       <path value="$PROJECT_DIR$/vendor/neoan3-apps/db" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/neoan3-apps/hcaptcha" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />

@@ -9,7 +9,9 @@
         "neoan3-apps/template":"^1",
         "neoan3-apps/db": "^0.2.1",
         "neoan3-model/index": "^0.0.1",
-        "neoan3-apps/transformer": "^1"
+        "neoan3-apps/transformer": "^1",
+        "phpmailer/phpmailer": "dev-master",
+        "neoan3-apps/hcaptcha": "dev-master"
     },
     "license": "MIT",
     "authors": [
