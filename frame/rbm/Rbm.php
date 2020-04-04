@@ -25,10 +25,15 @@ class Rbm extends Serve
             print('SETUP: No credentials found. Please check README for instructions and/or change ' . __FILE__ . ' starting at line ' . (__LINE__ - 4) . ' ');
             die();
         }
-        // TODO: Test Hcapture
+
+//        Hcapture::setEnvironment([
+//            'siteKey' => $this->credentials['rbm_hcaptcha']['sitekey'],
+//            'secret' => $this->credentials['rbm_hcaptcha']['secret'],
+//            'apiKey' => $this->credentials['rbm_hcaptcha']['apiKey']
+//        ]);
         Hcapture::setEnvironment([
-            'siteKey' => $this->credentials['rbm_hcaptcha']['sitekey'],
-            'secret' => $this->credentials['rbm_hcaptcha']['secret'],
+            'siteKey' => '10000000-ffff-ffff-ffff-000000000001',
+            'secret' => '0x0000000000000000000000000000000000000000',
             'apiKey' => $this->credentials['rbm_hcaptcha']['apiKey']
         ]);
     }

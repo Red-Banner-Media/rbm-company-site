@@ -2,10 +2,13 @@
 
 namespace Neoan3\Components;
 
+use Neoan3\Apps\Hcapture;
 use Neoan3\Frame\Rbm;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
-
+use PHPMailer\PHPMailer\OAuth;
+use SendGrid;
+use SendGrid\Mail\Mail;
 
 /**
  * Class some
@@ -31,36 +34,32 @@ class Contactus extends Rbm
         return self::$requiredComponents;
     }
 
-    function postContactus ($email)
+    function postContactus (array $emailForm)
     {
-        $this->credentials = getCredentials();
-        $mail = new PHPMailer(true);
-        $emailContents = $email['params']['email'];
-        try {
-            //Server Settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-            $mail->isSMTP();
+        $human = Hcapture::isHuman();
+        if($human){
+            $this->credentials = getCredentials();
+            $emailSettings = $this->credentials['rbm_mail'];
 
-            $mail->Host = 'smtp.gmail.com';
-            $mail->Port = 587;
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-
-            $mail->SMTPAuth = true;
-
-            // TODO: Update the below
-
-            $mail->Username = $this->credentials['rbm_mail']['Username'];
-            $mail->Password = $this->credentials['rbm_mail']['Password'];
-            $mail->setFrom($emailContents['clientEmail']);
-            $mail->addReplyTo($this->credentials['rbm_mail']['Username'], 'Roberto Rivera');
-            $mail->addAddress('whoto@example.com', 'John Doe');
-            $mail->Subject = $emailContents['subject'];
-            //TODO: create email html
-            $mail->Body = $emailContents['body'];
-
-            $mail->send();
-        } catch (\Exception $e) {
-            return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            $email = new Mail();
+            $email->setFrom($emailForm['emailContents']['clientEmail'], "Example User");
+            $email->setSubject("Sending with SendGrid is Fun");
+            $email->addTo("rrivera@redbannermedia.com", "Example User");
+            $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+            $email->addContent(
+                "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+            );
+            $sendgrid = new SendGrid(getenv('SENDGRID_API_KEY'));
+            try {
+                $response = $sendgrid->send($email);
+                print $response->statusCode() . "\n";
+                print_r($response->headers());
+                print $response->body() . "\n";
+            } catch (Exception $e) {
+                echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+        } else {
+            return ['error'=>'it borked'];
         }
     }
 }

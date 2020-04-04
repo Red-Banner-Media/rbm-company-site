@@ -14490,7 +14490,7 @@ button {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   background: linear-gradient(#b8bbb8, #4b4f4c) no-repeat fixed;
 }
@@ -14516,6 +14516,11 @@ h1{
   background-position: center;
   background-image: url("./asset/RedBannerMedia_Diamond.svg");
   transform: rotate(45deg);
+}
+
+#root{
+  min-height: 100%;
+  margin-bottom: -56px;
 }
 
 @media (min-width: 640px){

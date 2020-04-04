@@ -10,16 +10,14 @@ Vue.component('contactus', {
         }
     },
     methods:{
-        sendEmail (email){
+        sendEmail (){
             api.post('contactus', {
-                params: {email}
+                params: {
+                    email: this.emailContents
+                }
             }).catch(err => {
                 console.error(err);
             });
         },
-        // TODO: create Form Validation and sanitation
-        validateForm(email){
-            this.sendEmail(email);
-        }
     }
 });

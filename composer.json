@@ -11,7 +11,8 @@
         "neoan3-model/index": "^0.0.1",
         "neoan3-apps/transformer": "^1",
         "phpmailer/phpmailer": "dev-master",
-        "neoan3-apps/hcaptcha": "dev-master"
+        "neoan3-apps/hcaptcha": "dev-master",
+        "sendgrid/sendgrid": "~7"
     },
     "license": "MIT",
     "authors": [
