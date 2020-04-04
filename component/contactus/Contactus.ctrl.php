@@ -36,13 +36,15 @@ class Contactus extends Rbm
 
     function postContactus (array $emailForm)
     {
-        $human = Hcapture::isHuman();
-        if($human){
+//        $human = Hcapture::isHuman();
+        if(!empty($emailForm)){
             $this->credentials = getCredentials();
             $emailSettings = $this->credentials['rbm_mail'];
+            $emailContent = $emailForm['params']['email'];
+
 
             $email = new Mail();
-            $email->setFrom($emailForm['emailContents']['clientEmail'], "Example User");
+            $email->setFrom($emailContent['clientEmail'], "Example User");
             $email->setSubject("Sending with SendGrid is Fun");
             $email->addTo("rrivera@redbannermedia.com", "Example User");
             $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
