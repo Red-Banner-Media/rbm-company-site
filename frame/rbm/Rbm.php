@@ -13,7 +13,7 @@ use Neoan3\Apps\Hcapture;
 
 class Rbm extends Serve
 {
-    private array $credentials = [];
+    protected array $credentials = [];
     private array $loadedComponents = [];
 
     function __construct()
@@ -26,14 +26,9 @@ class Rbm extends Serve
             die();
         }
 
-//        Hcapture::setEnvironment([
-//            'siteKey' => $this->credentials['rbm_hcaptcha']['sitekey'],
-//            'secret' => $this->credentials['rbm_hcaptcha']['secret'],
-//            'apiKey' => $this->credentials['rbm_hcaptcha']['apiKey']
-//        ]);
         Hcapture::setEnvironment([
-            'siteKey' => '10000000-ffff-ffff-ffff-000000000001',
-            'secret' => '0x0000000000000000000000000000000000000000',
+            'siteKey' => $this->credentials['rbm_hcaptcha']['sitekey'],
+            'secret' => $this->credentials['rbm_hcaptcha']['secret'],
             'apiKey' => $this->credentials['rbm_hcaptcha']['apiKey']
         ]);
     }

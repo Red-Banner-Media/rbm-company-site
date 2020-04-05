@@ -4,9 +4,6 @@ namespace Neoan3\Components;
 
 use Neoan3\Apps\Hcapture;
 use Neoan3\Frame\Rbm;
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\OAuth;
 use SendGrid;
 use SendGrid\Mail\Mail;
 
@@ -16,7 +13,7 @@ use SendGrid\Mail\Mail;
  */
 class Contactus extends Rbm
 {
-    private array $credentials = [];
+    protected array $credentials = [];
 
     /**
      * @var array of dependencies as strings
@@ -36,8 +33,8 @@ class Contactus extends Rbm
 
     function postContactus (array $emailForm)
     {
-//        $human = Hcapture::isHuman();
-        if(!empty($emailForm)){
+        $human = Hcapture::isHuman();
+        if($human){
             $this->credentials = getCredentials();
             $emailSettings = $this->credentials['rbm_mail'];
             $emailContent = $emailForm['params']['email'];
@@ -46,7 +43,7 @@ class Contactus extends Rbm
             $email = new Mail();
             $email->setFrom($emailContent['clientEmail'], "Example User");
             $email->setSubject("Sending with SendGrid is Fun");
-            $email->addTo("rrivera@redbannermedia.com", "Example User");
+            $email->addTo($emailSettings['Username'], "Roberto Rivera");
             $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
             $email->addContent(
                 "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
