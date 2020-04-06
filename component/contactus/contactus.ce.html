@@ -1,6 +1,7 @@
-<div class="email-wrapper w-full flex flex-col content-center p-8 ">
-    <div class="px-20 py-10 mx-auto my-10 bg-primary shadow-md rounded border-b-4 border-t-4 border-secondary">
-        <form class="bg-white rounded p-5 m-5"
+<div class="email-wrapper w-full flex flex-col content-center">
+    <div class="px-5 py-5 mx-auto my-10 bg-primary shadow-md rounded flex justify-center
+         border-b-4 border-t-4 border-secondary w-4/5 sm:w-4/5 md:w-4/5 lg:w-3/5 xl:w-2/5">
+        <form class="bg-white rounded p-5 w-full"
               method="post"
               @submit.prevent="sendEmail">
             <h1 class="z-10 text-center text-2xl text-yellow-600 pb-3">CONTACT US TODAY</h1>
@@ -20,6 +21,7 @@
                       rows="10"
                       v-model="emailContents.body"
                       placeholder="Enter your message..."></textarea>
+                <span class="text-primary italic py-2 text-center">{{error}}</span>s
                 <div class="h-captcha flex flex-row justify-center" data-sitekey="fac206f7-10b4-455e-b1e8-135fd489d81f"></div>
                 <button class="bg-secondary hover:bg-primary hover:text-secondary text-white font-bold py-2 px-4 mt-5 rounded w-full"
                         type="submit">

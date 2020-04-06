@@ -33,12 +33,13 @@ h1{
 .rbm-header:before{
     content: "";
     position: absolute;
-    width: 700%;
-    height: 1000%;
-    top: -50%;
+    width: 600%;
+    height: 800%;
+    top: -90%;
     left: -200%;
     background-repeat: repeat;
     background-position: center;
+    background-size: auto;
     background-image: url("./asset/RedBannerMedia_Diamond.svg");
     transform: rotate(45deg);
 }

@@ -5,17 +5,20 @@ Vue.component('contactus', {
             emailContents: {
                 clientEmail: '',
                 subject: '',
-                body: ''
-            }
+                body: '',
+                'h-captcha-response':''
+            },
+            error: ''
         }
     },
     methods:{
         sendEmail (){
-            api.post('contactus', {
-                params: {
-                    email: this.emailContents
-                }
-            }).catch(err => {
+            this.emailContents['h-captcha-response'] = hcaptcha.getResponse();
+            api.post('contactus', this.emailContents)
+                .then(res => {
+                    this.error = res.data.error === false ? 'Please use the hcapture below' : '';
+                })
+                .catch(err => {
                 console.error(err);
             });
         },

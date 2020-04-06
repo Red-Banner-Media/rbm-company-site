@@ -31,24 +31,21 @@ class Contactus extends Rbm
         return self::$requiredComponents;
     }
 
-    function postContactus (array $emailForm)
+    function postContactus(array $emailForm)
     {
-        $human = Hcapture::isHuman();
-        if($human){
+        $human = Hcapture::isHuman($emailForm);
+        if ($human) {
             $this->credentials = getCredentials();
             $emailSettings = $this->credentials['rbm_mail'];
-            $emailContent = $emailForm['params']['email'];
-
+            $apiKey = $this->credentials['rbm_sendgrid']['SENDGRID_API_KEY'];
 
             $email = new Mail();
-            $email->setFrom($emailContent['clientEmail'], "Example User");
-            $email->setSubject("Sending with SendGrid is Fun");
+            $email->setFrom($emailForm['clientEmail'], "Potential Client");
+            $email->setSubject($emailForm['subject']);
             $email->addTo($emailSettings['Username'], "Roberto Rivera");
-            $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-            $email->addContent(
-                "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-            );
-            $sendgrid = new SendGrid(getenv('SENDGRID_API_KEY'));
+            $email->addContent("text/plain", $emailForm['body']);
+            $sendgrid = new SendGrid($apiKey);
+
             try {
                 $response = $sendgrid->send($email);
                 print $response->statusCode() . "\n";
@@ -58,7 +55,7 @@ class Contactus extends Rbm
                 echo 'Caught exception: '. $e->getMessage() ."\n";
             }
         } else {
-            return ['error'=>'it borked'];
+            return ['error' => false ];
         }
     }
 }

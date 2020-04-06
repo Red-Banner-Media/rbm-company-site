@@ -57,11 +57,8 @@ class Rbm extends Serve
             ],
             'js' => [
                 ['src' => base . 'node_modules/axios/dist/axios.min.js'],
-                ['src' => base . 'node_modules/vue/dist/vue.js'],
-                // TODO: Remove regular and replace with min version after production
-                // ['src' => base . 'node_modules/vue/dist/vue.min.js'],
+                ['src' => base . 'node_modules/vue/dist/vue.min.js'],
                 ['src' => base . 'frame/rbm/main.js', 'data' => ['base' => base]],
-                // TODO: Talk to Stefan about adding attributes like async & defer
                 ['src' => 'https://hcaptcha.com/1/api.js', 'attr'=>'async']
             ]
         ];
