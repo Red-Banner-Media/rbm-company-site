@@ -1,0 +1,36 @@
+{
+  "cards": [
+    {
+      "title": "Empowered Clients",
+      "description": "Regardless of the scale of your project, Red Banner Media will always empower clients with the knowledge they need to make informed decisions on how to scale their business with technology. Every consultation will be provided a customized Road Map to determine the best growth for your business."
+    },
+    {
+      "title": "Web Development",
+      "description": "Web sites are the new face of a business. We leverage new technology to help give your companies website the user experience that draws new customers."
+    },
+    {
+      "title": "Search Engine Optimization",
+      "description": "We empower your business with the necessary tools to begin your journey into Search Engine Optimization. Making it easier for your customers to find and share your services with others."
+    },
+    {
+      "title": "User Experience",
+      "description": "From phones to an Ultra-wide desktop monitor, your site will work on any modern device. Making sure that your users never feel alienated."
+    },
+    {
+      "title": "Customer Outreach",
+      "description": "Red Banner Media can provide you with the necessary tools to communicate to customers old and new about what your business provides."
+    },
+    {
+      "title": "Ecommerce",
+      "description": "We can provide you the tools to sell your goods and services online where users will always be able to find them."
+    },
+    {
+      "title": "ADA Compliance",
+      "description": "Regardless of your users impairment, Red Banner Media will make your website easily accessible to those with Disabilities."
+    },
+    {
+      "title": "Active Participation",
+      "description": "There won't be a part of our process that you don't understand. We actively inspire all of our clients to comment, test and add to the road map to their success."
+    }
+  ]
+}
