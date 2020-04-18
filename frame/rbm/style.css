@@ -14524,6 +14524,24 @@ h1{
   margin-bottom: -56px;
 }
 
+.rbm-content-wrapper{
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: var(--color-primary);
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-bottom-width: 4px;
+  border-top-width: 4px;
+  border-color: var(--color-secondary);
+  width: 83.333333%;
+}
+
 @media (min-width: 640px){
   .sm\:sr-only{
     position: absolute;

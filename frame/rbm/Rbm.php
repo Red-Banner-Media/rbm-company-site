@@ -18,7 +18,6 @@ class Rbm extends Serve
 
     function __construct()
     {
-        parent::__construct();
         try {
             $this->credentials = getCredentials();
         } catch (\Exception $e) {
@@ -31,6 +30,9 @@ class Rbm extends Serve
             'secret' => $this->credentials['rbm_hcaptcha']['secret'],
             'apiKey' => $this->credentials['rbm_hcaptcha']['apiKey']
         ]);
+        $this->vueComponent('rbmheader');
+        $this->hook('header', 'rbmheader');
+        parent::__construct();
     }
 
     function constants()

@@ -15,7 +15,7 @@ class Home extends Rbm
     /**
      * @var array
      */
-    private array $vueComponents = ['home','rbmheader', 'contactus', 'rbmfooter', 'rbmcard'];
+    private array $vueComponents = ['home', 'rbmcard', 'contactus', 'rbmfooter'];
     
     /**
      * init route 

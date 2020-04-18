@@ -48,3 +48,8 @@ h1{
     min-height: 100%;
     margin-bottom: -56px;
 }
+
+.rbm-content-wrapper{
+    @apply min-h-screen mx-auto my-5 flex flex-col content-center bg-primary rounded shadow-md border-b-4 border-t-4 border-secondary;
+    width: 83.333333%;
+}

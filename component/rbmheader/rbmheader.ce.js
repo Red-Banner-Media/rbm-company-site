@@ -41,3 +41,4 @@ Vue.component('rbmheader', {
         window.removeEventListener('scroll', this.handleScroll);
     }
 });
+

@@ -1,21 +1,17 @@
 <section>
-    <rbmheader></rbmheader>
-    <!--Services-->
     <div id="services"
-         class="main-content min-h-screen w-5/6 mx-auto my-5 flex flex-col content-center bg-primary rounded shadow-md border-b-4 border-t-4 border-secondary">
+         class="rbm-content-wrapper">
         <div class="topper w-full mx-auto flex flex-row justify-center ">
             <div class="max-w-screen-xl min-h-full py-5 px-3 m-6 text-center">
                 <span class="text-lg text-gray-400 text-3xl font-bold">Our Services</span>
                 <p class="text-left text-white">
                     Technology constantly evolves, and keeping up can be an entire career unto itself. Red Banner Media,
-                    keeps
-                    track of web technologies and finds what fits your specific business needs.
+                    keeps track of web technologies and finds what fits your specific business needs.
                 </p>
             </div>
         </div>
         <div class="services-wrapper flex flex-row lg:flex-row md:flex-row flex-wrap justify-center px-5">
             <rbmcard v-for="item in items">
-                <!--TODO: Find/Create SVG's for each section-->
                 <template v-slot:title>
                     {{item.title}}
                 </template>
@@ -28,13 +24,24 @@
     <!--/Services-->
 
     <!--Portfolio-->
-    <!--TODO: Create a card system for Services and portfolio-->
-    <div id="portfolio">
-
+    <div id="portfolio"
+        class="rbm-content-wrapper">
+        <span class="text-center text-lg text-gray-400 text-3xl font-bold py-5 px-3">Portfolio</span>
+        <rbmcard v-for="port in ports">
+            <template v-slot:image>
+                <a :href="port.links">
+                    <img :src="port.image" alt="portfolio image">
+                </a>
+            </template>
+            <template v-slot:title>
+                {{port.title}}
+            </template>
+            <template v-slot:description>
+                {{port.description}}
+            </template>
+        </rbmcard>
     </div>
     <!--/Portfolio-->
-
-
     <contactus id="contact"></contactus>
     <rbmfooter></rbmfooter>
 </section>

@@ -26,4 +26,3 @@ class Rbmheader extends Rbm
         return self::$requiredComponents;
     }
 }
-
