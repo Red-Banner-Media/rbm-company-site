@@ -15,7 +15,7 @@ class AnnounceTool extends Rbm
     /**
      * @var array
      */
-    private $vueComponents = ['rbmfooter'];
+    private $vueComponents = [];
     
     /**
      * init route 

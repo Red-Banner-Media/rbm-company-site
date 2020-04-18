@@ -15,9 +15,10 @@ class Rbm extends Serve
 {
     protected array $credentials = [];
     private array $loadedComponents = [];
-
+    public string $template = '';
     function __construct()
     {
+        parent::__construct();
         try {
             $this->credentials = getCredentials();
         } catch (\Exception $e) {
@@ -30,9 +31,9 @@ class Rbm extends Serve
             'secret' => $this->credentials['rbm_hcaptcha']['secret'],
             'apiKey' => $this->credentials['rbm_hcaptcha']['apiKey']
         ]);
-        $this->vueComponent('rbmheader');
+        $this->vueComponents(['rbmheader', 'rbmfooter']);
         $this->hook('header', 'rbmheader');
-        parent::__construct();
+        $this->hook('footer', 'rbmfooter');
     }
 
     function constants()
@@ -70,8 +71,9 @@ class Rbm extends Serve
     function output($params = [])
     {
         $this->js .= 'new Vue({el:"#root"});';
-        $this->main = '<div id="root" class="main">' . $this->header . $this->main . '</div>';
+        $this->main = '<div id="root" class="main">' . $this->header . $this->main . $this->footer . '</div>' . $this->template;
         $this->header = '';
+        $this->footer = '';
         parent::output($params);
     }
 
@@ -92,7 +94,7 @@ class Rbm extends Serve
         $params['base'] = base;
         $path = path . '/component/' . $element . '/' . $element . '.ce.';
         if (file_exists($path . $this->viewExt)) {
-            $this->footer .= '<template id="' . $element . '">' . $this->fileContent($path . $this->viewExt, $params) .
+            $this->template .= '<template id="' . $element . '">' . $this->fileContent($path . $this->viewExt, $params) .
                 '</template>';
         }
         if (file_exists($path . $this->styleExt)) {
