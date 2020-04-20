@@ -9,6 +9,7 @@ Vue.component('announcetool', {
             output: '',
             clipState: 'COPY TO CLIPBOARD',
             codearea: '',
+            preview: false,
             formComplete: false
         }
     },
@@ -33,6 +34,9 @@ Vue.component('announcetool', {
             }).catch(err => {
                 console.error(err)
             });
+        },
+        previewModal (){
+            this.preview = !this.preview;
         }
-    }
+    },
 });

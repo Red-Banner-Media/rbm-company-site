@@ -15,7 +15,7 @@ class Announcetool extends Rbm
     /**
      * @var array
      */
-    private $vueComponents = ['announcetool'];
+    private $vueComponents = ['announcetool', 'contactus'];
     
     /**
      * init route 

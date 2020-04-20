@@ -61,6 +61,8 @@ class Rbm extends Serve
             'js' => [
                 ['src' => base . 'node_modules/axios/dist/axios.min.js'],
                 ['src' => base . 'node_modules/vue/dist/vue.min.js'],
+                ['src' => 'https://unpkg.com/vue'],
+                ['src' => base . 'asset/rbm-modal-component.min.js'],
                 ['src' => base . 'frame/rbm/main.js', 'data' => ['base' => base]],
                 ['src' => 'https://hcaptcha.com/1/api.js', 'attr'=>'async']
             ]

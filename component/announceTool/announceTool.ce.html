@@ -1,5 +1,5 @@
-<section class="h-screen my-10">
-    <div class="rbm-content-wrapper text-center">
+<section class="h-full my-10">
+    <div class="rbm-content-wrapper min-full text-center">
         <div class="flex flex-col justify-center text-white w-4/5 mx-auto my-5">
             <h1 class="text-3xl text-gray-600 ">
                 Announcement Tool
@@ -18,12 +18,12 @@
             </div>
             <div class="flex flex-col justify-center h-full">
                 <form class="bg-gray-200 shadow-md rounded p-3 mb-4 w-full"
-                      method="post"
+                      method="get"
                       @submit.prevent="submitForm">
                     <div class="mb-4">
                         <label for="title"
                                class="block text-gray-700 text-sm font-bold mb-2">
-                            Title
+                            Title for the modal
                         </label>
                         <input type="text"
                                id="title"
@@ -57,19 +57,58 @@
                 <div class="bg-gray-200 shadow-md rounded p-2 mb-4 h-full w-full"
                      v-if="formComplete">
                     <textarea id="codearea"
-                              rows="7"
+                              rows="8"
                               cols="33"
                               class="bg-black rounded text-green-700 h-auto w-full p-2"
                               v-model="output">
                     </textarea>
                     <div class="w-full flex flex-row justify-end">
+                        <button class="bg-green-600 text-white font-bold py-2 px-4 mx-2 rounded w-1/4"
+                                @click="previewModal">
+                            PREVIEW
+                        </button>
                         <button class="rbm-button w-1/4"
                                 @click="copyToClipboard">
-                                {{clipState}}
+                            {{clipState}}
                         </button>
                     </div>
                 </div>
+                <rbm-modal-component v-bind:msg-title="modalForm.msgTitle"
+                                     v-if="preview"
+                                     @click="previewModal">
+                    {{modalForm.msgBody}}
+                </rbm-modal-component>
             </div>
         </div>
     </div>
+    <div class="rbm-content-wrapper text-left min-h-10">
+        <div class="flex flex-col justify-center text-white w-4/5 mx-auto my-5">
+
+            <h1 class="text-3xl text-gray-600 text-center">
+                FAQ's
+            </h1>
+            <ul class="list-disc">
+                <li class="p-3">
+                    How do I update the message? - The least you need is any common text. The most you'll need is
+                    knowledge of HTML. However HTML is not necessary to know. To update the title you'll just need to
+                    change the value of the msgTitle attribute in the opening tag. To update the message contents you'll
+                    just need to enter text between the opening and closing tags.
+                </li>
+                <li class="p-3">
+                    I like the tool, but I'd like to change how it looks. How do I do that? - If you're confident with
+                    CSS you can simply add any additional styles to your pre-existing code. However, if you're
+                    unfamiliar or just having troubles with it than feel free to reach out to us! This is a tool that is
+                    free to use and meant to help out businesses during these times. We're more than willing to update
+                    our styles within reason.
+                </li>
+                <li class="p-3">
+                    I've added the code and followed the directions to the letter and it doesn't look right on my page.
+                    What did I do wrong? You may have done nothing wrong! Every site is unique, and therefore it's hard
+                    to predict every deviation that would need to be accounted for. Simply put, if you need help feel
+                    free to reach out using the contact information below and we'll update the code.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <contactus></contactus>
 </section>
