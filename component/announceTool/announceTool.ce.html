@@ -1,0 +1,75 @@
+<section class="h-screen my-10">
+    <div class="rbm-content-wrapper text-center">
+        <div class="flex flex-col justify-center text-white w-4/5 mx-auto my-5">
+            <h1 class="text-3xl text-gray-600 ">
+                Announcement Tool
+            </h1>
+            <div class="intro-wrapper flex flex-col my-5">
+                <p>
+                    In these ever changing times, you need a quick way to update your site without having to figure out
+                    code.
+                    The announcement tool is perfect for those business owners who need to make a quick announcement to
+                    their
+                    customers.
+                </p>
+                <span>
+                    Fill out the form below and we'll output the code you need. Then you copy and paste!
+                </span>
+            </div>
+            <div class="flex flex-col justify-center h-full">
+                <form class="bg-gray-200 shadow-md rounded p-3 mb-4 w-full"
+                      method="post"
+                      @submit.prevent="submitForm">
+                    <div class="mb-4">
+                        <label for="title"
+                               class="block text-gray-700 text-sm font-bold mb-2">
+                            Title
+                        </label>
+                        <input type="text"
+                               id="title"
+                               required
+                               class="rbm-input focus:outline-none focus:shadow-outline"
+                               placeholder="Title..."
+                               v-model="modalForm.msgTitle">
+                    </div>
+                    <div class="mb-4">
+                        <label for="msgBody"
+                               class="block text-gray-700 text-sm font-bold mb-2">
+                            Body of your message
+                        </label>
+                        <textarea id="msgBody"
+                                  required
+                                  class="rbm-input focus:outline-none focus:shadow-outline h-32"
+                                  placeholder="Body of your message..."
+                                  v-model="modalForm.msgBody"></textarea>
+                    </div>
+                    <div class="w-full flex flex-row justify-end">
+                        <button class="rbm-button-cancel w-1/4"
+                                @click.prevent="clearForm">
+                            CLEAR
+                        </button>
+                        <button class="rbm-button w-1/4"
+                                type="submit">
+                            CREATE
+                        </button>
+                    </div>
+                </form>
+                <div class="bg-gray-200 shadow-md rounded p-2 mb-4 h-full w-full"
+                     v-if="formComplete">
+                    <textarea id="codearea"
+                              rows="7"
+                              cols="33"
+                              class="bg-black rounded text-green-700 h-auto w-full p-2"
+                              v-model="output">
+                    </textarea>
+                    <div class="w-full flex flex-row justify-end">
+                        <button class="rbm-button w-1/4"
+                                @click="copyToClipboard">
+                                {{clipState}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

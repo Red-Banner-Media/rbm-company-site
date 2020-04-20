@@ -23,13 +23,14 @@
                       cols="33"
                       rows="10"
                       v-model="emailContents.body"
-                      placeholder="Enter your message..."></textarea>
-                <span class="text-primary italic py-2 text-center">{{error}}</span>
-                <div class="h-captcha flex flex-row justify-center" data-sitekey="fac206f7-10b4-455e-b1e8-135fd489d81f" data-size="compact"></div>
-                <button class="bg-secondary hover:bg-primary hover:text-secondary text-white font-bold py-2 px-4 mt-5 rounded w-full"
-                        type="submit">
-                    SEND
-                </button>
+                      placeholder="Enter your message...">
+            </textarea>
+            <span class="text-primary italic py-2 text-center">{{error}}</span>
+            <div class="h-captcha flex flex-row justify-center" data-sitekey="fac206f7-10b4-455e-b1e8-135fd489d81f" data-size="compact"></div>
+            <button class="rbm-button"
+                    type="submit">
+                SEND
+            </button>
         </form>
     </div>
 </div>

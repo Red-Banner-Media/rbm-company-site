@@ -14542,6 +14542,58 @@ h1{
   width: 83.333333%;
 }
 
+.rbm-input{
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: #4a5568;
+  line-height: 1.25;
+}
+
+.rbm-button{
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.rbm-button:hover{
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.rbm-button-cancel{
+  background-color: #c53030;
+  color: #fff;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.rbm-button-cancel:hover{
+  background-color: #fed7d7;
+  color: var(--color-primary);
+}
+
 @media (min-width: 640px){
   .sm\:sr-only{
     position: absolute;
