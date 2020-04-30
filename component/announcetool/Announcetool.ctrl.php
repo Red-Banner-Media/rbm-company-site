@@ -24,6 +24,12 @@ class Announcetool extends Rbm
     {
         $this
             ->hook('main', 'announcetool', [])
+            ->addHead('title', 'Red Banner Media, LLC | Web Development Company | Announcement Tool')
+            ->addHead('meta', [
+                'name'=>'description',
+                'content'=>'The announcement tool from Red Banner Media, LLC. Update your company web site with just a 
+                quick copy and paste.'
+            ])
             ->vueComponents($this->vueComponents, [])
             ->output();
     }

@@ -19,5 +19,6 @@ class Cdnlink extends Rbm
     {
         header('Content-type:application/javascript');
         echo file_get_contents(base . 'asset/rbm-modal-component.min.js');
+        exit();
     }
 }

@@ -24,6 +24,12 @@ class Home extends Rbm
     {
         $this
             ->hook('main', 'home', [])
+            ->addHead('title', 'Red Banner Media, LLC | Web Development Company in Rochester, NY')
+            ->addHead('meta', [
+                'name'=>'description',
+                'content'=>'Red Banner Media, LLC brings web technologies to your business. We develop websites, web apps
+                and tools that help you run your business.'
+            ])
             ->vueComponents($this->vueComponents, [])
             ->output();
     }

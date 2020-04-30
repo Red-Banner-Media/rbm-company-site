@@ -37,6 +37,7 @@ Vue.component('announcetool', {
         },
         previewModal (){
             this.preview = !this.preview;
+            document.documentElement.scrollTop = 0;
         }
     },
 });
