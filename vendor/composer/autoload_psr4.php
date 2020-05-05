@@ -11,5 +11,5 @@ return array(
     'SendGrid\\Contacts\\' => array($vendorDir . '/sendgrid/sendgrid/lib/contacts'),
     'SendGrid\\' => array($vendorDir . '/sendgrid/php-http-client/lib'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
-    'Neoan3\\Apps\\' => array($vendorDir . '/neoan3-apps/db', $vendorDir . '/neoan3-apps/hcaptcha', $vendorDir . '/neoan3-apps/template', $vendorDir . '/neoan3-apps/transformer'),
+    'Neoan3\\Apps\\' => array($vendorDir . '/neoan3-apps/cache', $vendorDir . '/neoan3-apps/db', $vendorDir . '/neoan3-apps/hcaptcha', $vendorDir . '/neoan3-apps/template', $vendorDir . '/neoan3-apps/transformer'),
 );

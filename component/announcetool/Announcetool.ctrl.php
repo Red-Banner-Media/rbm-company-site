@@ -30,6 +30,7 @@ class Announcetool extends Rbm
                 'content'=>'The announcement tool from Red Banner Media, LLC. Update your company web site with just a 
                 quick copy and paste.'
             ])
+            ->includeJs(base . 'asset/rbm-modal-component.min.js')
             ->vueComponents($this->vueComponents, [])
             ->output();
     }

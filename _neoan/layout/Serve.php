@@ -126,7 +126,7 @@ class Serve
      */
     function startHtml()
     {
-        $this->html .= '<!doctype html><html><head>{{head}}</head><body>';
+        $this->html .= '<!doctype html><html lang="en-us"><head>{{head}}</head><body>';
         $this->html .= '<style>{{importedStyles}}{{style}}</style>';
         $this->html .= '<header>{{header}}</header><neoan-root></neoan-root>{{main}}<footer>{{footer}}</footer>';
         $this->html .= '{{importedScripts}}{{scripts}}<script>{{js}}</script>{{modules}}</body></html>';
@@ -254,7 +254,6 @@ class Serve
                 }
             }
         }
-
     }
 
     /**

@@ -14558,8 +14558,8 @@ h1{
 }
 
 .rbm-button{
-  background-color: var(--color-secondary);
-  color: #fff;
+  background-color: #38a169;
+  color: #000;
   font-weight: 700;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;

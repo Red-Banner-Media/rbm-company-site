@@ -6,13 +6,14 @@
         "php": "^7.4",
         "ext-json": "*",
         "mnsami/composer-custom-directory-installer": "1.1.*",
-        "neoan3-apps/template":"^1",
+        "neoan3-apps/template":"dev-master",
         "neoan3-apps/db": "^0.2.1",
         "neoan3-model/index": "^0.0.1",
         "neoan3-apps/transformer": "^1",
         "phpmailer/phpmailer": "dev-master",
         "neoan3-apps/hcaptcha": "dev-master",
-        "sendgrid/sendgrid": "~7"
+        "sendgrid/sendgrid": "~7",
+        "neoan3-apps/cache": "dev-master"
     },
     "license": "MIT",
     "authors": [

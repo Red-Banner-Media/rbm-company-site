@@ -4,30 +4,38 @@
         <form class="bg-white rounded p-5 w-full"
               method="post"
               @submit.prevent="sendEmail">
-            <h1 class="z-10 text-center text-2xl text-yellow-600 pb-3">CONTACT US TODAY</h1>
-            <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg mb-5 py-2
+            <h1 class="z-10 text-center text-2xl text-yellow-800 pb-3">CONTACT US TODAY</h1>
+            <label for="email">Email</label>
+                <input class="bg-white focus:outline-none focus:shadow-outline border border-green-300 rounded-lg mb-5 py-2
+                       px-4 block w-full appearance-none leading-normal"
+                       type="email"
+                       name="email"
+                       id="email"
+                       v-model="emailContents.clientEmail"
+                       required
+                       placeholder="jane@example.com">
+            <label for="subject">Subject</label>
+                <input class="bg-white focus:outline-none focus:shadow-outline border border-green-300 rounded-lg mb-5 py-2
                    px-4 block w-full appearance-none leading-normal"
-                   type="email"
-                   v-model="emailContents.clientEmail"
-                   required
-                   placeholder="jane@example.com">
-            <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg mb-5 py-2
-                   px-4 block w-full appearance-none leading-normal"
-                   type="text"
-                   v-model="emailContents.subject"
-                   placeholder="Subject...">
-            <textarea class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg mb-5
-                      py-2 px-4 block w-full appearance-none leading-normal"
-                      name="body"
-                      id="email-body"
-                      cols="33"
-                      rows="10"
-                      v-model="emailContents.body"
-                      placeholder="Enter your message...">
-            </textarea>
+                       type="text"
+                       name="subject"
+                       id="subject"
+                       v-model="emailContents.subject"
+                       placeholder="Subject...">
+            <label for="email-body">Write Message Here</label>
+                <textarea class="bg-white focus:outline-none focus:shadow-outline border border-green-300 rounded-lg mb-5
+                          py-2 px-4 block w-full appearance-none leading-normal"
+                          name="email-body"
+                          id="email-body"
+                          cols="33"
+                          rows="10"
+                          v-model="emailContents.body"
+                          placeholder="Enter your message...">
+                </textarea>
             <span class="text-primary italic py-2 text-center">{{error}}</span>
-            <div class="h-captcha flex flex-row justify-center" data-sitekey="fac206f7-10b4-455e-b1e8-135fd489d81f" data-size="compact"></div>
-            <button class="rbm-button"
+            <div class="h-captcha flex flex-row justify-center" data-sitekey="fac206f7-10b4-455e-b1e8-135fd489d81f"
+                 data-size="compact"></div>
+            <button class="rbm-button w-full"
                     type="submit">
                 SEND
             </button>

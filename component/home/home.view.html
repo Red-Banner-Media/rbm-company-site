@@ -1,1 +1,44 @@
-<home></home>
+<section>
+    <div id="services" class="rbm-content-wrapper min-h-screen">
+        <div class="topper w-full mx-auto flex flex-row justify-center ">
+            <div class="max-w-screen-xl min-h-full py-5 px-3 m-6 text-center">
+                <span class="text-lg text-gray-400 text-3xl font-bold">Our Services</span>
+                <p class="text-left text-white">
+                    Technology constantly evolves, and keeping up can be an entire career unto itself. Red Banner Media,
+                    keeps track of web technologies and finds what fits your specific business needs.
+                </p>
+            </div>
+        </div>
+        <div class="services-wrapper flex flex-row lg:flex-row md:flex-row flex-wrap justify-center px-5">
+
+            <div class="shadow-md lg:w-1/4 md:w-3/4 md:mx-auto md:w-3/4 md:mx-auto min-h-full bg-white rounded p-6 my-6 lg:mx-10 text-center"
+                 n-for="services as service">
+                <span class="text-lg text-gray-700 text-gray-700 font-bold">
+                    {{service.title}}
+                </span>
+                <p class="text-left">
+                    {{service.description}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--/Services-->
+
+    <div id="portfolio" class="rbm-content-wrapper min-h-screen">
+        <div class="shadow-md lg:w-1/4 md:w-3/4 md:mx-auto md:w-3/4 md:mx-auto min-h-full bg-white rounded p-6 my-6 lg:mx-10 text-center"
+             n-for="ports as port">
+            <span class="text-center text-lg text-gray-700 text-3xl font-bold py-5 px-3">Portfolio</span>
+            <a href="{{port.links}}">
+                <img src="{{port.image}}" alt="portfolio image" laoding="lazy">
+            </a>
+            <span class="text-lg text-gray-700 text-gray-700 font-bold">
+                    {{port.title}}
+                </span>
+            <p class="text-left">
+                {{port.description}}
+            </p>
+        </div>
+    </div>
+    <!--/Portfolio-->
+    <contactus id="contact"></contactus>
+</section>

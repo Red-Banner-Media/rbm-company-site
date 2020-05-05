@@ -10,6 +10,7 @@ namespace Neoan3\Frame;
 
 use Neoan3\Core\Serve;
 use Neoan3\Apps\Hcapture;
+use Neoan3\Apps\Cache;
 
 class Rbm extends Serve
 {
@@ -48,12 +49,13 @@ class Rbm extends Serve
                     'sizes' => '32x32',
                     'type' => 'image/png',
                     'rel' => 'icon',
-                    'href' => 'asset/RedBannerMedia_Favicon.png'
+//                    'href' => 'asset/RedBannerMedia_Favicon.png'
+                    'href' => 'asset/hnet.com-image.ico'
                 ],
                 [
                     'href' => 'https://fonts.googleapis.com/css2?family=Lora&display=swap',
-                    'rel' => 'stylesheet'
-                ]
+                    'rel' => 'preconnect'
+                ],
             ],
             'stylesheet' => [
                 '' . base . 'frame/rbm/style.css',
@@ -61,10 +63,8 @@ class Rbm extends Serve
             'js' => [
                 ['src' => base . 'node_modules/axios/dist/axios.min.js'],
                 ['src' => base . 'node_modules/vue/dist/vue.min.js'],
-                ['src' => 'https://unpkg.com/vue'],
-                ['src' => base . 'asset/rbm-modal-component.min.js'],
-                ['src' => base . 'frame/rbm/main.js', 'data' => ['base' => base]],
-                ['src' => 'https://hcaptcha.com/1/api.js', 'attr'=>'async']
+                ['src' => path . '/frame/rbm/main.js', 'data' => ['base' => base]],
+                ['src' => 'https://hcaptcha.com/1/api.js']
             ]
         ];
     }

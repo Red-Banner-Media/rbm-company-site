@@ -16,6 +16,7 @@ $start = microtime(true);
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
     header("X-Frame-Options: {$_SERVER['HTTP_ORIGIN']}");
+    header('Cache-Control: max-age=31536000, must-revalidate');
 } else {
     header("X-Frame-Options: GOFORIT");
 }

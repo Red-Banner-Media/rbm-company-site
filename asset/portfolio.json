@@ -1,7 +1,7 @@
 {
   "cards": [
     {
-      "image": "./asset/preview.png",
+      "image": "./asset/preview.jpg",
       "title": "Announcement Tool",
       "description": "A quick, copy and paste tool free for business owners who just want to alert their customers.",
       "links": "./announcetool"

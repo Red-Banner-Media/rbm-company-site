@@ -7,7 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit1afed20e80a9c96e41087ae4b4457a98
 {
     public static $files = array (
+        'fe81f4db7ca976f7e113f097866cf957' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/BaseInterface.php',
         '3f8bdd3b35094c73a26f0106e3c0f8b2' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
+        '0596c9fb5a9dba3cf8abc2fdaa05141c' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/TwilioEmail.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -51,10 +53,11 @@ class ComposerStaticInit1afed20e80a9c96e41087ae4b4457a98
         ),
         'Neoan3\\Apps\\' => 
         array (
-            0 => __DIR__ . '/..' . '/neoan3-apps/db',
-            1 => __DIR__ . '/..' . '/neoan3-apps/hcaptcha',
-            2 => __DIR__ . '/..' . '/neoan3-apps/template',
-            3 => __DIR__ . '/..' . '/neoan3-apps/transformer',
+            0 => __DIR__ . '/..' . '/neoan3-apps/cache',
+            1 => __DIR__ . '/..' . '/neoan3-apps/db',
+            2 => __DIR__ . '/..' . '/neoan3-apps/hcaptcha',
+            3 => __DIR__ . '/..' . '/neoan3-apps/template',
+            4 => __DIR__ . '/..' . '/neoan3-apps/transformer',
         ),
     );
 
