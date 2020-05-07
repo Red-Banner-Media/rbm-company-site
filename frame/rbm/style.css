@@ -14495,17 +14495,21 @@ body {
   background: linear-gradient(#b8bbb8, #4b4f4c) no-repeat fixed;
 }
 
-h1{
+h1 {
   font-family: 'Lora', serif;
 }
 
-.rbm-header{
+section {
+  margin-top: 72px;
+}
+
+.rbm-header {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.rbm-header:before{
+.rbm-header:before {
   content: "";
   position: absolute;
   width: 600%;
@@ -14519,12 +14523,12 @@ h1{
   transform: rotate(45deg);
 }
 
-#root{
+#root {
   min-height: 100%;
   margin-bottom: -56px;
 }
 
-.rbm-content-wrapper{
+.rbm-content-wrapper {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.25rem;
@@ -14541,7 +14545,7 @@ h1{
   width: 83.333333%;
 }
 
-.rbm-input{
+.rbm-input {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -14557,7 +14561,7 @@ h1{
   line-height: 1.25;
 }
 
-.rbm-button{
+.rbm-button {
   background-color: #38a169;
   color: #000;
   font-weight: 700;
@@ -14570,12 +14574,12 @@ h1{
   border-radius: 0.25rem;
 }
 
-.rbm-button:hover{
+.rbm-button:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
 }
 
-.rbm-button-cancel{
+.rbm-button-cancel {
   background-color: #c53030;
   color: #fff;
   font-weight: 700;
@@ -14588,7 +14592,7 @@ h1{
   border-radius: 0.25rem;
 }
 
-.rbm-button-cancel:hover{
+.rbm-button-cancel:hover {
   background-color: #fed7d7;
   color: var(--color-primary);
 }

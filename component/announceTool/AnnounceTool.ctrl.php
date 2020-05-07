@@ -10,12 +10,12 @@ use Neoan3\Frame\Rbm;
  * @package Neoan3\Components
  */
 
-class Announcetool extends Rbm
+class AnnounceTool extends Rbm
 {
     /**
      * @var array
      */
-    private $vueComponents = ['announcetool', 'contactus'];
+    private $vueComponents = ['announceTool', 'contactus'];
     
     /**
      * init route 
@@ -23,7 +23,7 @@ class Announcetool extends Rbm
     function init()
     {
         $this
-            ->hook('main', 'announcetool', [])
+            ->hook('main', 'announceTool', [])
             ->addHead('title', 'Red Banner Media, LLC | Web Development Company | Announcement Tool')
             ->addHead('meta', [
                 'name'=>'description',

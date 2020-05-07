@@ -1,5 +1,5 @@
 Vue.component('announcetool', {
-    template: document.querySelector('#announcetool'),
+    template: document.querySelector('#announceTool'),
     data: function () {
         return {
             modalForm: {
