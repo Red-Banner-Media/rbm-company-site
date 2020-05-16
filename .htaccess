@@ -3,6 +3,7 @@
 #Options +FollowSymLinks
 RewriteEngine On
 
+# Be sure to remove rbm-company/ when uploading to live server
 RewriteBase /rbm-company/
 
 

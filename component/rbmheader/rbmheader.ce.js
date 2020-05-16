@@ -5,9 +5,6 @@ Vue.component('rbmheader', {
             hideElement: false
         }
     },
-    mounted() {
-        this.captureHeader();
-    },
     methods: {
         top(){
             document.body.scrollTop = 0;

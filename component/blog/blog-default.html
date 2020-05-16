@@ -1,0 +1,21 @@
+<div class="text-center min-h-screen">
+    <h1 class="text-3xl text-gray-700">
+        The Red Banner Blog
+    </h1>
+    <div class="rbm-content-wrapper text-white">
+        <p class="mx-auto py-8 w-4/5">
+            Red Banner Media stands for transparency and education in the field of Web Development for anyone that is
+            interested. The following articles are filled with news and educational pieces. If there are subjects that
+            you are interested in let us know and we'll be more than happy to cover the subject.
+        </p>
+        <div class="py-8">
+            <ul class="text-yellow-800 font-bold flex flex-row flex-wrap justify-center w-full">
+                <li n-for="menuItems as item" class="px-8">
+                    <a href="./blog/{{item.link}}/">
+                        {{item.name}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

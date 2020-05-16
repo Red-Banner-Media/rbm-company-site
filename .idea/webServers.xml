@@ -3,11 +3,10 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="a1594de9-4067-4120-8385-763fccedf97c" name="13.58.188.75" url="http://13.58.188.75">
-        <fileTransfer host="13.58.188.75" port="22" privateKey="C:\Users\Bobby\Documents\Red Banner Media\rbmAWS.ppk" rootFolder="/var/www/html/" accessType="SFTP" keyPair="true">
+        <fileTransfer rootFolder="/var/www/html/" accessType="SFTP" sshConfigId="c28e10d2-2b8a-4539-8b0f-3f92f1b0adca" sshConfig="13.58.188.75">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
-          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
     </option>

@@ -31,6 +31,11 @@ class Contactus extends Rbm
         return self::$requiredComponents;
     }
 
+    /**
+     * @param array $emailForm
+     * @return bool[]
+     * @throws SendGrid\Mail\TypeException
+     */
     function postContactus(array $emailForm)
     {
         $human = Hcapture::isHuman($emailForm);
